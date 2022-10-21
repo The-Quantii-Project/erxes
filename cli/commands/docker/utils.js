@@ -12,6 +12,10 @@ const commonEnvs = configs => {
     rabbitmq.pass
   }@${rabbitmq.server_address || db_server_address}:5672/${rabbitmq.vhost}`;
 
+  // TODO: change the redis port to the environment variable instead
+  // ERXES_REDIS_PORT
+  // use env read()
+
   return {
     ELASTIC_APM_HOST_NAME: configs.elastic_apm_host_name,
     DEBUG: 'erxes*',

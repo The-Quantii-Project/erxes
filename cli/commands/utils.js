@@ -216,6 +216,9 @@ module.exports.startServices = async configs => {
 
   const API_MONGO_URL = generateMongoUrl('erxes');
 
+  // TODO: change REDIS_PORT to ERXES_REDIS_PORT
+  // to match env variable...
+
   const commonEnv = {
     NODE_ENV: 'production',
     JWT_TOKEN_SECRET: JWT_TOKEN_SECRET || '',
